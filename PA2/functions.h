@@ -10,15 +10,31 @@
 #define FUNCTIONS_H
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <stdbool.h>
+#include <limits.h>
 
 /*
- * Parameters:
- * Returns: 
+ * Parameters: NONE
+ * Returns: An integer between 0 and 255
  * 
- * Used to: 
+ * Used to: Record an integer between 0 and 255 to be used as the multiplicand.
 */
+unsigned int record_multiplicand();
+
+/*
+ * Parameters: NONE
+ * Returns: An integer between 0 and 255
+ * 
+ * Used to: Record an integer between 0 and 255 to be used as the multiplier.
+*/
+unsigned int record_multiplier();
+
+/*
+ * Parameters: An integer
+ * Returns: An integer between 0 and 255
+ * 
+ * Used to: Check that the input number is between 0 and 255. If not, request another number. 
+ *          When the number is within the limits, return it
+*/
+unsigned int check_num(int x);
 
 #endif

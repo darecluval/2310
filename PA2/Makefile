@@ -3,7 +3,7 @@
 CC=gcc
 CFLAGS=-Wall -g 
 LFLAGS=-lm 
-TARGET=lab8 
+TARGET=PA2 
  
 # Locate all c source, header, and object files. The wildcard means 
 # it will find all files ending in the specified extension (ie. .c or .h)

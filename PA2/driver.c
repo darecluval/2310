@@ -10,7 +10,10 @@
 
 int main(int argc, char* argv[]) {
 
-  
+  int multiplicand = record_multiplicand();
+  int multiplier = record_multiplier();
+
+  printf("%d %d\n", multiplicand, multiplier);
 
   return 0;
 }
