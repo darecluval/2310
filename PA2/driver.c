@@ -10,10 +10,34 @@
 
 int main(int argc, char* argv[]) {
 
-  int multiplicand = record_multiplicand();
-  int multiplier = record_multiplier();
+  int M = record_multiplicand();
+  int Q = record_multiplier();
+  int orig_Q = Q;
+  int C = 0, ACC = 0;
 
-  printf("%d %d\n", multiplicand, multiplier);
+  printf("\n");
 
-  return 0;
+  printf("M = multiplicand = %d (User specified)\n", M);
+  printf("Q = multiplier = %d (User specified)\n", Q);
+  printf("C = carry = %d\n", C);
+  printf("ACC = accumulator = %d\n", ACC);
+
+  printf("\n");
+
+  step_zero(C, ACC, M, Q);
+  printf("\n");
+  
+  struct one_two result; 
+
+  for (int i = 1; i <= 8; i++){
+      result = step_n(i, C, ACC, M, Q);
+      ACC = to_decimal(result.acc);
+      Q = to_decimal(result.q);
+  }
+
+  unsigned int real_ans = to_decimal_opt(result.acc) + to_decimal(result.q);
+  check_product(real_ans, M, orig_Q);
+
+    return 0;
 }
+

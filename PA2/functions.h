@@ -12,6 +12,19 @@
 #include <stdio.h>
 #include <limits.h>
 
+// struct one_two { 
+//     int one, two; 
+// }; 
+  
+// typedef struct one_two Struct; 
+
+struct one_two ; /* Forward declaration */
+
+typedef struct one_two
+{
+   int acc, q; 
+} one_two_ ;
+
 /*
  * Parameters: NONE
  * Returns: An integer between 0 and 255
@@ -36,5 +49,70 @@ unsigned int record_multiplier();
  *          When the number is within the limits, return it
 */
 unsigned int check_num(int x);
+
+/*
+ * Parameters: An integer
+ * Returns: An integer between 0 and 255
+ * 
+ * Used to: Check that the input number is between 0 and 255. If not, request another number. 
+ *          When the number is within the limits, return it
+*/
+//register initialize_register();
+
+/*
+ * Parameters: An unsigned integer
+ * Returns: An integer 
+ * 
+ * Used to: Convert an integer to the binary representation.
+*/
+int to_bin(unsigned int x);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to therterminal)
+ * 
+ * Used to: Print the decimal and binary representation of an integer.
+*/
+void print_dec_bin(int x);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to the terminal)
+ * 
+ * Used to: 
+*/
+void step_zero(int C, int ACC, int M, int Q);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to the terminal)
+ * 
+ * Used to: 
+*/
+struct one_two step_n(int N, int C, int ACC, int M, int Q);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to the terminal)
+ * 
+ * Used to: 
+*/
+int to_decimal(int x);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to the terminal)
+ * 
+ * Used to: 
+*/
+int to_decimal_opt(int x);
+
+/*
+ * Parameters: An integer
+ * Returns: NONE (Prints to the terminal)
+ * 
+ * Used to: 
+*/
+void check_product(int product, int M, int Q);
 
 #endif
