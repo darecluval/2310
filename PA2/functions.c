@@ -188,7 +188,7 @@ int to_decimal_opt(int x){
 
 // Check that the final outcome of ACC&Q is the actual product of 
 // the inital M * Q.
-void check_product(product, M, Q){
+void check_product(int product, int M, int Q){
     printf("Checking... %d * %d = %d\n", M, Q, M*Q);
     if (M*Q == product) {
         printf("PASSED!\n");
